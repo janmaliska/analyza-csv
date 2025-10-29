@@ -105,32 +105,43 @@ def process_csv(input_file: str, output_file: str):
     
     rows_processed = 0
     
-    with open(input_file, 'r', encoding='utf-8') as infile:
-        reader = csv.DictReader(infile, delimiter=';')
-        
-        # Get existing fieldnames and add new column
-        fieldnames = reader.fieldnames
-        if not fieldnames:
-            raise ValueError("No fieldnames found in CSV")
-        
-        fieldnames = list(fieldnames)
-        fieldnames.append('Odhad prodeje 2026')
-        
-        # Write output file
-        with open(output_file, 'w', encoding='utf-8', newline='') as outfile:
-            writer = csv.DictWriter(outfile, fieldnames=fieldnames, delimiter=';')
-            writer.writeheader()
+    try:
+        with open(input_file, 'r', encoding='utf-8') as infile:
+            reader = csv.DictReader(infile, delimiter=';')
             
-            for row in reader:
-                # Estimate sales for this row
-                estimated_sales = estimate_sales(row)
-                row['Odhad prodeje 2026'] = str(estimated_sales)
+            # Get existing fieldnames and add new column
+            fieldnames = reader.fieldnames
+            if not fieldnames:
+                raise ValueError("No fieldnames found in CSV")
+            
+            fieldnames = list(fieldnames)
+            fieldnames.append('Odhad prodeje 2026')
+            
+            # Write output file
+            with open(output_file, 'w', encoding='utf-8', newline='') as outfile:
+                writer = csv.DictWriter(outfile, fieldnames=fieldnames, delimiter=';')
+                writer.writeheader()
                 
-                writer.writerow(row)
-                rows_processed += 1
+                for row in reader:
+                    # Estimate sales for this row
+                    estimated_sales = estimate_sales(row)
+                    row['Odhad prodeje 2026'] = str(estimated_sales)
+                    
+                    writer.writerow(row)
+                    rows_processed += 1
+        
+        print(f"✓ Zpracováno {rows_processed} položek")
+        print(f"✓ Výstupní soubor uložen do: {output_file}")
     
-    print(f"✓ Zpracováno {rows_processed} položek")
-    print(f"✓ Výstupní soubor uložen do: {output_file}")
+    except FileNotFoundError:
+        print(f"✗ Chyba: Vstupní soubor '{input_file}' nebyl nalezen")
+        raise
+    except PermissionError:
+        print(f"✗ Chyba: Nedostatečná oprávnění pro čtení/zápis souborů")
+        raise
+    except Exception as e:
+        print(f"✗ Chyba při zpracování souboru: {str(e)}")
+        raise
 
 
 if __name__ == '__main__':
