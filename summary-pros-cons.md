@@ -245,9 +245,9 @@
 3. **PMD** (quick start)
 
 **Nejlepší ROI:**
-- **Malé projekty**: PMD + Checkstyle (€0, vysoká hodnota)
-- **Střední projekty**: SonarQube Community (€0, komplexní)
-- **Velké projekty**: SonarQube Developer (€150/rok, plné features)
+- **Malé projekty**: PMD + Checkstyle ($0, vysoká hodnota)
+- **Střední projekty**: SonarQube Community ($0, komplexní)
+- **Velké projekty**: SonarQube Developer ($150/rok, plné features)
 
 ### 📊 Doporučená kombinace nástrojů:
 
@@ -270,6 +270,8 @@ SonarQube Enterprise + CodeQL Advanced Security + Infer (kritické části)
 ```
 
 ### 🎯 Rozhodovací kritéria:
+
+**Poznámka o cenách:** Všechny ceny jsou uvedeny v USD. Pro orientaci: $1 ≈ 0.95€ (kurz se může měnit).
 
 **Vyberte SonarQube pokud:**
 - Potřebujete centralizovaný dashboard
@@ -334,6 +336,9 @@ A: Ne, pokud každý plní jinou roli. Ale začněte s 1-2 a postupně přidáve
 
 **Q: Jak dlouho trvá setup?**
 A: Checkstyle/PMD: 1-2 hodiny. SonarQube: 1 den. CodeQL: 30 minut (GitHub).
+
+**Q: Ceny jsou v USD nebo EUR?**
+A: Všechny ceny v tomto dokumentu jsou uvedeny v USD, protože většina nástrojů používá USD jako primární měnu. Pro přepočet do EUR použijte aktuální kurz (~$1 = 0.95€).
 
 **Q: Budou nástroje zpomalovat CI/CD?**
 A: Ano, ale lze minimalizovat: incremental analysis, paralelizace, cache.

@@ -85,9 +85,9 @@ Máte GitHub?
 ├─ ANO → CodeQL (zdarma pro public repos)
 │        └─ Doplňte: PMD + Checkstyle
 └─ NE  → Jaký rozpočet?
-         ├─ €0     → PMD + Checkstyle + SpotBugs
-         ├─ <€500  → SonarCloud
-         └─ >€500  → SonarQube Developer/Enterprise
+         ├─ $0     → PMD + Checkstyle + SpotBugs
+         ├─ <$500  → SonarCloud
+         └─ >$500  → SonarQube Developer/Enterprise
 ```
 
 ## 📝 Issue tracking

@@ -4,11 +4,11 @@
 
 | Nástroj | Typ | Licence | Cena | CI/CD Ready | PR Blokování | Security Focus |
 |---------|-----|---------|------|-------------|--------------|----------------|
-| SonarQube | Platforma | Mixed | Free - €€€ | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐⭐⭐⭐ |
+| SonarQube | Platforma | Mixed | Free - $$$$ | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐⭐⭐⭐ |
 | Checkstyle | Linter | LGPL | Free | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐☆☆☆ |
 | SpotBugs | Bug Finder | LGPL | Free | ⭐⭐⭐⭐☆ | ✅ Yes | ⭐⭐⭐☆☆ |
 | PMD | Analyzer | BSD | Free | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐⭐☆☆ |
-| CodeQL | Security | Proprietary | Free - €€ | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐⭐⭐⭐ |
+| CodeQL | Security | Proprietary | Free - $$ | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐⭐⭐⭐ |
 | Error Prone | Compiler | Apache 2.0 | Free | ⭐⭐⭐⭐⭐ | ✅ Yes | ⭐⭐☆☆☆ |
 | Infer | Verifier | MIT | Free | ⭐⭐⭐☆☆ | ✅ Yes | ⭐⭐⭐⭐☆ |
 | SonarLint | IDE Plugin | Proprietary | Free | ⭐☆☆☆☆ | ❌ No | ⭐⭐⭐☆☆ |
@@ -142,11 +142,11 @@
 
 | Rozpočet | Doporučené nástroje | Poznámka |
 |----------|---------------------|----------|
-| €0 | PMD + Checkstyle + SpotBugs | Kompletní open source stack |
-| €0 (GitHub) | CodeQL + Error Prone + PMD | Využití GitHub zdarma |
-| <€500/rok | SonarCloud Startup | Cloud hosted, jednoduchý setup |
-| €500-2000/rok | SonarQube Developer | Branch analysis, více features |
-| >€2000/rok | SonarQube Enterprise | Full features, portfolio management |
+| $0 | PMD + Checkstyle + SpotBugs | Kompletní open source stack |
+| $0 (GitHub) | CodeQL + Error Prone + PMD | Využití GitHub zdarma |
+| <$500/rok | SonarCloud Startup | Cloud hosted, jednoduchý setup |
+| $500-2000/rok | SonarQube Developer | Branch analysis, více features |
+| >$2000/rok | SonarQube Enterprise | Full features, portfolio management |
 
 ### Doporučení podle security požadavků
 
@@ -193,7 +193,7 @@
 
 Před výběrem nástroje odpovězte na tyto otázky:
 
-- [ ] Jaký je náš rozpočet? (€0 / <€500 / >€500)
+- [ ] Jaký je náš rozpočet? ($0 / <$500 / >$500)
 - [ ] Používáme GitHub? (CodeQL zdarma)
 - [ ] Kolik máme vývojářů? (<5 / 5-20 / >20)
 - [ ] Jsou security požadavky kritické? (Yes = CodeQL/SonarQube)
@@ -213,7 +213,7 @@ Máte GitHub?
 │        └─ Enterprise? → SonarQube Developer
 │
 └─ NE  → Jaký je rozpočet?
-         ├─ €0 → PMD + Checkstyle + SpotBugs
-         ├─ <€500 → SonarCloud
-         └─ >€500 → SonarQube Developer/Enterprise
+         ├─ $0 → PMD + Checkstyle + SpotBugs
+         ├─ <$500 → SonarCloud
+         └─ >$500 → SonarQube Developer/Enterprise
 ```
